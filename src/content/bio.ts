@@ -1,5 +1,7 @@
 export const bio = {
   name: "Dr. Shanta M. Sarvaiya (Samanta)",
+  /** Her preferred public-facing name treatment: "Shanta Samanta" set large, "Sarvaiya" set small beneath it. */
+  displayName: { primary: "Shanta Samanta", secondary: "Sarvaiya" },
   born: "1975, Haldia, West Bengal",
   role: "Assistant Professor, Faculty of Fine Arts, Sculpture Department, The M.S. University of Baroda",
   location: "Vadodara, India",
@@ -17,8 +19,38 @@ export const bio = {
   medium:
     "Bronze — her preferred material for being timeless, durable, expressive, technically challenging, and for the beauty of its patina.",
 
-  influencesInternational: ["Pablo Picasso", "Henri Matisse", "Andy Scott", "Louise Bourgeois"],
-  influencesIndian: ["Ramkinkar Baij", "Raghav Kaneria", "Dhruva Mistry"],
+  influencesInternational: [
+    {
+      name: "Pablo Picasso",
+      why: "His remarkable versatility and innovative spirit — experimenting across mediums, even incorporating found objects.",
+    },
+    {
+      name: "Henri Matisse",
+      why: "His masterpiece Dance, capturing a moment of pure, unbridled freedom and joy as figures whirl around in space.",
+    },
+    {
+      name: "Andy Scott",
+      why: "Met him at his studio during a Commonwealth project in 2012 — his monumental, larger-than-life sculptures, often built single-handedly, left a lasting impression.",
+    },
+    {
+      name: "Louise Bourgeois",
+      why: "Her sculptures and installations reassert the female body as a subject of artistic exploration rather than mere objectification.",
+    },
+  ],
+  influencesIndian: [
+    {
+      name: "Ramkinkar Baij",
+      why: "The raw energy and dynamic movement captured in his sculptures.",
+    },
+    {
+      name: "Prof. Raghav Kaneria",
+      why: "Her Guru — his Bull sculpture exudes astonishing power and fluidity, profoundly lyrical and rooted in his rural background.",
+    },
+    {
+      name: "Prof. Dhruva Mistry",
+      why: "Her teacher during her Master's degree — his reclining figure sculpture and unwavering work ethic remain a lasting influence.",
+    },
+  ],
 
   inspirationSources:
     "Classical Indian art — temple sculpture, manuscripts, miniature paintings — especially after a study tour to Badami, Aihole, Pattadakal and Hampi. Also draws on Mahishasura Mardini imagery, Naari Shakti, and the theme of good vs. evil.",
@@ -30,7 +62,7 @@ export const bio = {
     "Believes artists should engage with the issues of their time — war, environment, climate change, sustainability, mental health, technology, digital art, identity, gender, race, globalisation, freedom of expression, public art, and the accessibility of art. Views art as socially engaged, not merely decorative.",
 
   academicRole:
-    "Researcher, PhD-scholar mentor, curriculum developer, department leadership roles. Research themes: memory, transformation, materiality, the human body, collective memory, cultural narratives, everyday objects, participatory installations. Collaborated with the British Council on research; has published research papers.",
+    "Assistant Professor in the Sculpture Department, Faculty of Fine Arts, The M.S. University of Baroda, where she has taught for over two decades — since serving as a Teaching Assistant in Sculpture there in 2002–03. Holds a PhD in Sculpture from the same institution. Researcher, PhD-scholar mentor, curriculum developer, and department leadership roles. Research themes: memory, transformation, materiality, the human body, collective memory, cultural narratives, everyday objects, participatory installations. Has organised and participated in numerous hands-on workshops — Terracotta, Raku, Dokra, glass and ceramics. Collaborated with the British Council on research; has published research papers.",
 
   scholarships: ["National Cultural Scholarship (2000–02)", "Lalit Kala Akademi Scholarship (2003–04)"],
 
@@ -44,11 +76,20 @@ export const bio = {
     phone: "9898445038",
     website: "https://www.shantasamanta.com/",
     youtube: "https://youtu.be/K2k918_T14c",
+    /** Real profile URL supplied directly by the artist. */
+    academia: "https://msub.academia.edu/MsShantaSamanta",
   },
 
   quotes: [
     "Many of my Bronze creations are like a poetry of innocence of childhood and the wisdom and maturity of womanhood.",
     "I find there is a deep feminine connection between mother Earth (nature) and women, both vital for creation and nurturer of life and both are extremely exploited for their resources.",
+  ],
+
+  /** Verbatim quotes from the Art & Deal Magazine interview (Sept–Oct 2023) — see content/press.ts. */
+  processQuotes: [
+    "My scientific knowledge provided me with a deeper understanding of the chemical aspects involved in my art, especially the metal casting and patination process. It also influenced my ability to work with precision and maintain the necessary discipline to achieve accurate and consistent results.",
+    "Achieving a beautiful patina on bronze is a challenging yet enjoyable task, as art is often filled with delightful surprises and happy accidents.",
+    "I once obtained riverbank clay and created my first sculpture when I was in 2nd standard, which was a portrait of Goddess Durga. My parents were deeply impressed, and their admiration served as a great source of motivation for me.",
   ],
 } as const;
 

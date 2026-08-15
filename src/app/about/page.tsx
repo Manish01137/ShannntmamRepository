@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { bio } from "@/content/bio";
+import { exhibitions } from "@/content/exhibitions";
 import { ScrollReveal } from "@/components/ScrollReveal";
 
 export const metadata: Metadata = {
@@ -14,10 +16,13 @@ export default function AboutPage() {
     <div className="mx-auto max-w-5xl px-6 py-16 md:px-10 md:py-24">
       <ScrollReveal>
         <p className="font-sans text-sm tracking-[0.2em] text-bronze uppercase">About the Artist</p>
-        <h1 className="mt-4 font-display text-4xl text-bronze md:text-5xl">
-          {bio.name}
+        <h1 className="mt-4 font-display leading-tight text-bronze">
+          <span className="block text-4xl md:text-5xl">{bio.displayName.primary}</span>
+          <span className="mt-1 block text-lg text-charcoal/60 md:text-xl">
+            {bio.displayName.secondary}
+          </span>
         </h1>
-        <p className="mt-2 font-sans text-sm text-charcoal/70">
+        <p className="mt-3 font-sans text-sm text-charcoal/70">
           Born {bio.born} · {bio.location}
         </p>
       </ScrollReveal>
@@ -25,7 +30,8 @@ export default function AboutPage() {
       {/* Portrait + narrative */}
       <div className="mt-14 grid gap-10 md:grid-cols-[minmax(0,320px)_1fr] md:gap-14">
         <ScrollReveal>
-          <div className="relative aspect-4/5 w-full overflow-hidden rounded-sm md:sticky md:top-28">
+          <div className="md:sticky md:top-28">
+          <div className="relative aspect-4/5 w-full overflow-hidden rounded-sm">
             <Image
               src="/images/about/artist-portrait.webp"
               alt="Portrait of Dr. Shanta M. Sarvaiya, bronze sculptor, outdoors"
@@ -33,6 +39,7 @@ export default function AboutPage() {
               sizes="(min-width: 768px) 320px, 100vw"
               className="object-cover"
             />
+          </div>
           </div>
         </ScrollReveal>
 
@@ -82,24 +89,66 @@ export default function AboutPage() {
         <p className="mt-4 font-sans text-base leading-relaxed text-charcoal md:text-lg">
           {bio.inspirationSources}
         </p>
-        <div className="mt-6 grid gap-8 sm:grid-cols-2">
+        <div className="mt-6 grid gap-10 sm:grid-cols-2">
           <div>
             <h3 className="font-sans text-xs tracking-[0.15em] text-bronze uppercase">International</h3>
-            <ul className="mt-3 space-y-1.5 font-display text-lg text-charcoal">
-              {bio.influencesInternational.map((name) => (
-                <li key={name}>{name}</li>
+            <ul className="mt-4 space-y-4">
+              {bio.influencesInternational.map((inf) => (
+                <li key={inf.name}>
+                  <p className="font-display text-lg text-charcoal">{inf.name}</p>
+                  <p className="mt-0.5 font-sans text-sm leading-relaxed text-charcoal/70">{inf.why}</p>
+                </li>
               ))}
             </ul>
           </div>
           <div>
             <h3 className="font-sans text-xs tracking-[0.15em] text-bronze uppercase">Indian</h3>
-            <ul className="mt-3 space-y-1.5 font-display text-lg text-charcoal">
-              {bio.influencesIndian.map((name) => (
-                <li key={name}>{name}</li>
+            <ul className="mt-4 space-y-4">
+              {bio.influencesIndian.map((inf) => (
+                <li key={inf.name}>
+                  <p className="font-display text-lg text-charcoal">{inf.name}</p>
+                  <p className="mt-0.5 font-sans text-sm leading-relaxed text-charcoal/70">{inf.why}</p>
+                </li>
               ))}
             </ul>
           </div>
         </div>
+      </ScrollReveal>
+
+      {/* Awards & Recognition */}
+      <ScrollReveal className="mx-auto mt-20 max-w-3xl">
+        <h2 className="font-display text-2xl text-bronze">Awards &amp; Recognition</h2>
+        <div className="mt-6 grid gap-8 sm:grid-cols-2">
+          <div>
+            <h3 className="font-sans text-xs tracking-[0.15em] text-bronze uppercase">Awards</h3>
+            <ul className="mt-3 space-y-2 font-sans text-base text-charcoal/90">
+              {bio.awards.map((award) => (
+                <li key={award} className="border-l-2 border-gold pl-4">
+                  {award}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <h3 className="font-sans text-xs tracking-[0.15em] text-bronze uppercase">Scholarships</h3>
+            <ul className="mt-3 space-y-2 font-sans text-base text-charcoal/90">
+              {bio.scholarships.map((s) => (
+                <li key={s} className="border-l-2 border-gold pl-4">
+                  {s}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+        <p className="mt-6 font-sans text-sm leading-relaxed text-charcoal/70">
+          A fuller record of solo shows, group exhibitions, art fairs and public collections is
+          on the{" "}
+          <Link href="/exhibitions" className="text-bronze underline decoration-gold underline-offset-4">
+            Exhibitions
+          </Link>{" "}
+          page — including {exhibitions.soloShows.length} solo shows and collections held by{" "}
+          {exhibitions.publicCollections.length} institutions and private collectors.
+        </p>
       </ScrollReveal>
 
       {/* Academic & Research */}

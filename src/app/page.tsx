@@ -23,6 +23,8 @@ export default function Home() {
     (p): p is NonNullable<typeof p> => Boolean(p)
   );
 
+  const freedomPiece = pieces.find((p) => p.slug === "freedom");
+
   const seriesPreviews = SERIES_PREVIEW_SLUGS.map((slug) => {
     const series = seriesList.find((s) => s.slug === slug);
     if (!series) return null;
@@ -40,45 +42,81 @@ export default function Home() {
   return (
     <>
       {/* Hero */}
-      <section className="relative overflow-hidden bg-charcoal">
-        <div className="mx-auto grid max-w-6xl items-center gap-10 px-6 py-16 md:grid-cols-[1.15fr_1fr] md:gap-8 md:py-20 md:px-10 lg:py-24">
-          <div className="order-2 md:order-1">
-            <p className="font-sans text-sm tracking-[0.2em] text-gold uppercase">A Bronze Sculptor</p>
-            <h1 className="mt-4 font-display text-4xl leading-tight text-ivory md:text-5xl lg:text-6xl">
-              Shanta Samanta
+      <section className="relative h-[92vh] min-h-160 overflow-hidden bg-ivory">
+        <Image
+          src="/images/portfolio/living-tapestry/living-tapestry.webp"
+          alt="Shanta Samanta standing beside her Living Tapestry textile wall-hanging"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-[68%_22%]"
+        />
+        {/* Scrims: left-to-right for the text panel, top for the nav */}
+        <div
+          className="absolute inset-0 bg-linear-to-r from-ivory via-ivory/85 sm:via-ivory/75 to-ivory/10 sm:to-transparent"
+          aria-hidden
+        />
+        <div className="absolute inset-x-0 top-0 h-28 bg-linear-to-b from-ivory/70 to-transparent" aria-hidden />
+
+        <div className="relative mx-auto flex h-full max-w-6xl flex-col justify-center px-6 md:px-10">
+          <div className="max-w-md">
+            <h1 className="font-display leading-[1.05] text-charcoal">
+              <span className="block text-4xl md:text-5xl lg:text-6xl">{bio.displayName.primary}</span>
+              <span className="mt-1 block text-lg text-charcoal/60 md:text-xl">
+                {bio.displayName.secondary}
+              </span>
             </h1>
-            <p className="mt-6 max-w-md font-sans text-base leading-relaxed text-bronze-light md:text-lg">
+            <p className="mt-3 font-sans text-sm tracking-[0.2em] text-gold uppercase">Sculptor</p>
+            <span className="mt-5 block h-px w-16 bg-gold" aria-hidden />
+            <p className="mt-6 max-w-sm font-sans text-base leading-relaxed text-charcoal/85 md:text-lg">
               {heroIntro}
             </p>
+
             <Link
-              href="/about"
-              className="mt-6 inline-block font-sans text-sm tracking-wide text-ivory underline decoration-gold decoration-1 underline-offset-4 transition-colors hover:text-gold"
+              href="/portfolio"
+              className="mt-8 inline-flex items-center gap-2 border border-charcoal px-6 py-3 font-sans text-sm tracking-widest text-charcoal uppercase transition-colors hover:bg-charcoal hover:text-ivory"
             >
-              Read her story →
+              Explore Works <span aria-hidden>→</span>
             </Link>
 
-            <div className="mt-10 inline-flex items-center gap-3 rounded-sm border border-gold/30 px-4 py-2">
+            <div className="mt-8 inline-flex items-center gap-3 rounded-sm border border-charcoal/20 bg-ivory/60 px-4 py-2 backdrop-blur-sm">
               <span className="h-1.5 w-1.5 rounded-full bg-gold" />
-              <span className="font-sans text-xs tracking-wide text-bronze-light">
-                As featured in <span className="text-ivory">Art &amp; Deal Magazine</span>
+              <span className="font-sans text-xs tracking-wide text-charcoal/70">
+                As featured in <span className="text-bronze">Art &amp; Deal Magazine</span>
               </span>
             </div>
-          </div>
 
-          <div className="order-1 md:order-2">
-            <div className="relative mx-auto h-85 w-full max-w-70 sm:h-105 sm:max-w-80 md:mx-0 md:h-110 md:max-w-none lg:h-140 xl:h-155">
-              <div
-                className="absolute inset-0 -z-10 rounded-full bg-gold/10 blur-3xl"
-                aria-hidden
-              />
-              <Image
-                src="/images/portfolio/freedom/freedom-installed.webp"
-                alt="Freedom — a monumental stainless-steel figure releasing birds from open hands, installed outdoors against an evening sky"
-                fill
-                priority
-                sizes="(min-width: 1280px) 480px, (min-width: 768px) 42vw, 280px"
-                className="object-contain"
-              />
+            {/* Real contact channels only — standing in for a social row until Instagram/Facebook handles are confirmed */}
+            <div className="mt-8 flex items-center gap-5">
+              <Link href="/contact" aria-label="Contact" className="text-charcoal/70 transition-colors hover:text-bronze">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="h-5 w-5">
+                  <rect x="3" y="5" width="18" height="14" rx="2" />
+                  <path d="m4 7 8 6 8-6" />
+                </svg>
+              </Link>
+              <a
+                href={bio.contact.youtube}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="YouTube"
+                className="text-charcoal/70 transition-colors hover:text-bronze"
+              >
+                <svg viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5">
+                  <path d="M22 12s0-3.2-.4-4.7a2.9 2.9 0 0 0-2-2C17.9 5 12 5 12 5s-5.9 0-7.6.3a2.9 2.9 0 0 0-2 2C2 8.8 2 12 2 12s0 3.2.4 4.7c.3 1 1 1.8 2 2C6.1 19 12 19 12 19s5.9 0 7.6-.3a2.9 2.9 0 0 0 2-2c.4-1.5.4-4.7.4-4.7ZM10 15V9l5.2 3-5.2 3Z" />
+                </svg>
+              </a>
+              <a
+                href={bio.contact.academia}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Academia.edu"
+                className="text-charcoal/70 transition-colors hover:text-bronze"
+              >
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="h-5 w-5">
+                  <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                  <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                </svg>
+              </a>
             </div>
           </div>
         </div>
@@ -170,6 +208,63 @@ export default function Home() {
                 </Link>
               </ScrollReveal>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Public Art & Park Projects */}
+      <section className="bg-charcoal py-20 md:py-28">
+        <div className="mx-auto max-w-6xl px-6 md:px-10">
+          <ScrollReveal>
+            <p className="font-sans text-sm tracking-[0.2em] text-gold uppercase">Beyond the Studio</p>
+            <h2 className="mt-4 font-display text-2xl text-ivory md:text-3xl">Public Art &amp; Park Projects</h2>
+            <p className="mt-3 max-w-2xl font-sans text-base leading-relaxed text-bronze-light">
+              Monumental, site-specific commissions built to stand outdoors, year-round, in the
+              public realm.
+            </p>
+          </ScrollReveal>
+
+          <div className="mt-10 grid gap-8 md:grid-cols-2">
+            {freedomPiece?.images[0] && (
+              <ScrollReveal>
+                <Link href={`/portfolio/${freedomPiece.slug}`} className="group block">
+                  <div className="relative aspect-4/5 w-full overflow-hidden">
+                    <Image
+                      src={freedomPiece.images[0].src}
+                      alt={freedomPiece.images[0].alt}
+                      fill
+                      sizes="(min-width: 768px) 45vw, 100vw"
+                      className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+                    />
+                  </div>
+                  <p className="mt-4 font-display text-xl text-ivory transition-colors group-hover:text-gold">
+                    Freedom
+                  </p>
+                  <p className="mt-1 font-sans text-sm text-bronze-light">
+                    Stainless steel · Harni Sculpture Park, Vadodara
+                  </p>
+                </Link>
+              </ScrollReveal>
+            )}
+
+            <ScrollReveal delay={0.08}>
+              <div className="flex h-full flex-col items-center justify-center gap-3 border border-dashed border-ivory/20 px-8 py-14 text-center">
+                <svg viewBox="0 0 40 40" fill="none" aria-hidden className="h-10 w-10 text-ivory/30">
+                  <circle cx="20" cy="14" r="7" stroke="currentColor" strokeWidth="1.5" />
+                  <path
+                    d="M8 34c0-6.6 5.4-12 12-12s12 5.4 12 12"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                  />
+                </svg>
+                <p className="font-display text-lg text-ivory italic">A New Monumental Commission</p>
+                <p className="max-w-sm font-sans text-sm text-bronze-light">
+                  A public sculpture for Zydus Industries, Ahmedabad — currently in fabrication.
+                </p>
+                <p className="font-sans text-xs tracking-wide text-ivory/50 uppercase">Photograph coming soon</p>
+              </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>

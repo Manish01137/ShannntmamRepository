@@ -28,7 +28,7 @@ export function PortfolioNav({ series }: { series: Series[] }) {
   return (
     <nav
       aria-label="Portfolio series"
-      className="sticky top-17 z-40 -mx-6 overflow-x-auto border-b border-bronze/10 bg-ivory/95 px-6 py-3 backdrop-blur-sm md:top-15 md:-mx-10 md:px-10"
+      className="sticky top-16 z-40 -mx-6 overflow-x-auto border-b border-bronze/10 bg-ivory/95 px-6 py-3 backdrop-blur-sm md:-mx-10 md:px-10"
     >
       <ul className="flex min-w-max gap-6 font-sans text-sm tracking-wide text-charcoal/70">
         {series.map((s) => (

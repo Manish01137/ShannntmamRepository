@@ -4,9 +4,10 @@ import { bio } from "@/content/bio";
 const LINKS = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
-  { href: "/portfolio", label: "Portfolio" },
+  { href: "/portfolio", label: "Works" },
   { href: "/exhibitions", label: "Exhibitions" },
-  { href: "/press", label: "Press" },
+  { href: "/process", label: "Process" },
+  { href: "/press", label: "Writings" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -17,7 +18,12 @@ export function Footer() {
     <footer className="bg-charcoal text-ivory">
       <div className="mx-auto grid max-w-6xl gap-10 px-6 py-14 md:grid-cols-3 md:px-10">
         <div>
-          <p className="font-display text-lg text-ivory">Dr. Shanta M. Sarvaiya</p>
+          <p className="font-display text-lg text-ivory">
+            {bio.displayName.primary}
+            <span className="ml-2 align-middle text-xs tracking-[0.2em] text-bronze-light uppercase">
+              {bio.displayName.secondary}
+            </span>
+          </p>
           <p className="mt-1 text-sm text-bronze-light">Bronze Sculptor · Vadodara</p>
         </div>
 
@@ -41,9 +47,17 @@ export function Footer() {
             href={bio.contact.youtube}
             target="_blank"
             rel="noreferrer"
-            className="mt-2 inline-block transition-colors hover:text-gold"
+            className="mt-2 block transition-colors hover:text-gold"
           >
             YouTube
+          </a>
+          <a
+            href={bio.contact.academia}
+            target="_blank"
+            rel="noreferrer"
+            className="mt-2 block transition-colors hover:text-gold"
+          >
+            Academia.edu
           </a>
         </div>
       </div>

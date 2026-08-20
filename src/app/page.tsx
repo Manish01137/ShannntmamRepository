@@ -43,80 +43,79 @@ export default function Home() {
     <>
       {/* Hero */}
       <section className="relative overflow-hidden bg-ivory">
-        <div className="mx-auto grid max-w-6xl items-center gap-8 px-6 pt-28 pb-16 md:grid-cols-[1fr_1fr] md:gap-6 md:py-28 md:px-10 lg:grid-cols-[1fr_1.05fr] lg:gap-10 lg:py-32">
-          <div className="order-2 md:order-1">
-            <h1 className="font-display leading-[1.05] text-charcoal">
-              <span className="block text-4xl md:text-5xl lg:text-6xl">{bio.displayName.primary}</span>
-              <span className="mt-1 block text-lg text-charcoal/60 md:text-xl">
-                {bio.displayName.secondary}
-              </span>
-            </h1>
-            <p className="mt-3 font-sans text-sm tracking-[0.2em] text-gold uppercase">Sculptor</p>
-            <span className="mt-5 block h-px w-16 bg-gold" aria-hidden />
-            <p className="mt-6 max-w-sm font-sans text-base leading-relaxed text-charcoal/80 md:text-lg">
-              {heroIntro}
-            </p>
+        <div className="mx-auto max-w-3xl px-6 pt-28 pb-12 md:px-10 md:pt-32 md:pb-16">
+          <h1 className="font-display leading-[1.05] text-charcoal">
+            <span className="block text-4xl md:text-5xl lg:text-6xl">{bio.displayName.primary}</span>
+            <span className="mt-1 block text-lg text-charcoal/60 md:text-xl">
+              {bio.displayName.secondary}
+            </span>
+          </h1>
+          <p className="mt-3 font-sans text-sm tracking-[0.2em] text-gold uppercase">Sculptor</p>
+          <span className="mt-5 block h-px w-16 bg-gold" aria-hidden />
+          <p className="mt-6 max-w-lg font-sans text-base leading-relaxed text-charcoal/80 md:text-lg">
+            {heroIntro}
+          </p>
 
+          <div className="mt-8 flex flex-wrap items-center gap-6">
             <Link
               href="/portfolio"
-              className="mt-8 inline-flex items-center gap-2 border border-charcoal px-6 py-3 font-sans text-sm tracking-widest text-charcoal uppercase transition-colors hover:bg-charcoal hover:text-ivory"
+              className="inline-flex items-center gap-2 border border-charcoal px-6 py-3 font-sans text-sm tracking-widest text-charcoal uppercase transition-colors hover:bg-charcoal hover:text-ivory"
             >
               Explore Works <span aria-hidden>→</span>
             </Link>
 
-            <div className="mt-8 inline-flex items-center gap-3 rounded-sm border border-bronze/25 px-4 py-2">
+            <div className="inline-flex items-center gap-3 rounded-sm border border-bronze/25 px-4 py-2">
               <span className="h-1.5 w-1.5 rounded-full bg-gold" />
               <span className="font-sans text-xs tracking-wide text-charcoal/70">
                 As featured in <span className="text-bronze">Art &amp; Deal Magazine</span>
               </span>
             </div>
-
-            {/* Real contact channels only — standing in for a social row until Instagram/Facebook handles are confirmed */}
-            <div className="mt-8 flex items-center gap-5">
-              <Link href="/contact" aria-label="Contact" className="text-charcoal/60 transition-colors hover:text-bronze">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="h-5 w-5">
-                  <rect x="3" y="5" width="18" height="14" rx="2" />
-                  <path d="m4 7 8 6 8-6" />
-                </svg>
-              </Link>
-              <a
-                href={bio.contact.youtube}
-                target="_blank"
-                rel="noreferrer"
-                aria-label="YouTube"
-                className="text-charcoal/60 transition-colors hover:text-bronze"
-              >
-                <svg viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5">
-                  <path d="M22 12s0-3.2-.4-4.7a2.9 2.9 0 0 0-2-2C17.9 5 12 5 12 5s-5.9 0-7.6.3a2.9 2.9 0 0 0-2 2C2 8.8 2 12 2 12s0 3.2.4 4.7c.3 1 1 1.8 2 2C6.1 19 12 19 12 19s5.9 0 7.6-.3a2.9 2.9 0 0 0 2-2c.4-1.5.4-4.7.4-4.7ZM10 15V9l5.2 3-5.2 3Z" />
-                </svg>
-              </a>
-              <a
-                href={bio.contact.academia}
-                target="_blank"
-                rel="noreferrer"
-                aria-label="Academia.edu"
-                className="text-charcoal/60 transition-colors hover:text-bronze"
-              >
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="h-5 w-5">
-                  <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
-                  <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
-                </svg>
-              </a>
-            </div>
           </div>
 
-          <div className="order-1 md:order-2">
-            <div className="relative mx-auto h-90 w-full max-w-75 sm:h-110 sm:max-w-85 md:mx-0 md:h-115 md:max-w-none lg:h-140 xl:h-155">
-              <div className="absolute inset-0 -z-10 translate-x-4 translate-y-4 bg-patina-light" aria-hidden />
-              <Image
-                src="/images/portfolio/living-tapestry/living-tapestry.webp"
-                alt="Shanta Samanta standing beside her Living Tapestry textile wall-hanging"
-                fill
-                priority
-                sizes="(min-width: 1280px) 620px, (min-width: 768px) 48vw, 340px"
-                className="object-cover object-[68%_15%]"
-              />
-            </div>
+          {/* Real contact channels only — standing in for a social row until Instagram/Facebook handles are confirmed */}
+          <div className="mt-8 flex items-center gap-5">
+            <Link href="/contact" aria-label="Contact" className="text-charcoal/60 transition-colors hover:text-bronze">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="h-5 w-5">
+                <rect x="3" y="5" width="18" height="14" rx="2" />
+                <path d="m4 7 8 6 8-6" />
+              </svg>
+            </Link>
+            <a
+              href={bio.contact.youtube}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="YouTube"
+              className="text-charcoal/60 transition-colors hover:text-bronze"
+            >
+              <svg viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5">
+                <path d="M22 12s0-3.2-.4-4.7a2.9 2.9 0 0 0-2-2C17.9 5 12 5 12 5s-5.9 0-7.6.3a2.9 2.9 0 0 0-2 2C2 8.8 2 12 2 12s0 3.2.4 4.7c.3 1 1 1.8 2 2C6.1 19 12 19 12 19s5.9 0 7.6-.3a2.9 2.9 0 0 0 2-2c.4-1.5.4-4.7.4-4.7ZM10 15V9l5.2 3-5.2 3Z" />
+              </svg>
+            </a>
+            <a
+              href={bio.contact.academia}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Academia.edu"
+              className="text-charcoal/60 transition-colors hover:text-bronze"
+            >
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="h-5 w-5">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div className="mx-auto max-w-6xl px-6 pb-16 md:px-10 md:pb-24">
+          <div className="relative aspect-2/1 w-full overflow-hidden rounded-sm md:aspect-21/9">
+            <Image
+              src="/images/about/artist-studio-dancers.webp"
+              alt="Shanta Samanta in her studio, working on a bronze maquette beside a row of her bronze dancer sculptures"
+              fill
+              priority
+              sizes="(min-width: 1280px) 1152px, 100vw"
+              className="object-cover object-[65%_45%]"
+            />
           </div>
         </div>
       </section>

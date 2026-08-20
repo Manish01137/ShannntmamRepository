@@ -344,8 +344,14 @@ export const pieces: Piece[] = [
     title: "An Object Study",
     series: "object-study",
     medium: "Bronze",
-    comingSoon: true,
-    images: [],
+    images: [
+      {
+        src: "/images/portfolio/object-study/object-study.webp",
+        width: 753,
+        height: 2000,
+        alt: "An Object Study — a bronze seated girl in a mint-green dress on a wooden stool, holding a small object",
+      },
+    ],
   },
 
   // ---------- Sanjeevani ----------
@@ -414,8 +420,14 @@ export const pieces: Piece[] = [
     title: "Shackled",
     series: "shackled",
     medium: "Bronze",
-    comingSoon: true,
-    images: [],
+    images: [
+      {
+        src: "/images/portfolio/shackled/shackled.webp",
+        width: 720,
+        height: 1280,
+        alt: "Shackled — a bronze bust adorned with a flower, wearing a barbed-wire necklace in place of a diamond pendant",
+      },
+    ],
   },
 
   // ---------- Freedom ----------
@@ -653,6 +665,20 @@ export const pieces: Piece[] = [
         width: 2000,
         height: 1497,
         alt: "A robed bronze figure holding budding branches, mounted on a black base",
+      },
+    ],
+  },
+  {
+    slug: "dancing-trio",
+    title: "Dancing Trio",
+    series: "other-works",
+    medium: "Bronze",
+    images: [
+      {
+        src: "/images/portfolio/other-works/dancing-trio.webp",
+        width: 1080,
+        height: 1076,
+        alt: "Three bronze nude dancing figures in mid-motion, each on a round green-marble base",
       },
     ],
   },

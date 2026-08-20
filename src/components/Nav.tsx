@@ -69,11 +69,17 @@ export function Nav() {
             <li key={link.href}>
               <Link
                 href={link.href}
-                className={`transition-colors hover:text-gold ${
+                className={`group relative py-1 transition-colors hover:text-gold ${
                   pathname === link.href ? "text-bronze" : ""
                 }`}
               >
                 {link.label}
+                <span
+                  className={`absolute inset-x-0 -bottom-0.5 h-px origin-left scale-x-0 bg-gold transition-transform duration-300 ease-out group-hover:scale-x-100 ${
+                    pathname === link.href ? "scale-x-100" : ""
+                  }`}
+                  aria-hidden
+                />
               </Link>
             </li>
           ))}

@@ -62,7 +62,7 @@ export const bio = {
     "Believes artists should engage with the issues of their time — war, environment, climate change, sustainability, mental health, technology, digital art, identity, gender, race, globalisation, freedom of expression, public art, and the accessibility of art. Views art as socially engaged, not merely decorative.",
 
   academicRole:
-    "Assistant Professor in the Sculpture Department, Faculty of Fine Arts, The M.S. University of Baroda, where she has taught for over two decades — since serving as a Teaching Assistant in Sculpture there in 2002–03. Holds a PhD in Sculpture from the same institution. Researcher, PhD-scholar mentor, curriculum developer, and department leadership roles. Research themes: memory, transformation, materiality, the human body, collective memory, cultural narratives, everyday objects, participatory installations. Has organised and participated in numerous hands-on workshops — Terracotta, Raku, Dokra, glass and ceramics. Collaborated with the British Council on research; has published research papers.",
+    "Assistant Professor in the Sculpture Department, Faculty of Fine Arts, The M.S. University of Baroda, since 2013 — following an earlier appointment as Temporary Lecturer there in 2002–03. Holds a PhD in Sculpture from the same institution. Researcher, PhD-scholar mentor, curriculum developer, and department leadership roles. Research themes: memory, transformation, materiality, the human body, collective memory, cultural narratives, everyday objects, participatory installations. Has organised and participated in numerous hands-on workshops — Terracotta, Raku, Dokra, glass and ceramics. Collaborated with the British Council on a research project, \"Ecology and its Sustenance,\" with Dumbarton Academy, Scotland.",
 
   scholarships: ["National Cultural Scholarship (2000–02)", "Lalit Kala Akademi Scholarship (2003–04)"],
 
@@ -74,10 +74,13 @@ export const bio = {
 
   contact: {
     phone: "9898445038",
+    /** From her own CV. */
+    email: "sarvaiya.shanta-sculpture@msubaroda.ac.in",
     website: "https://www.shantasamanta.com/",
     youtube: "https://youtu.be/K2k918_T14c",
     /** Real profile URL supplied directly by the artist. */
     academia: "https://msub.academia.edu/MsShantaSamanta",
+    resumeUrl: "/shanta-samanta-cv.pdf",
   },
 
   quotes: [

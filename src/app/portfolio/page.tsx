@@ -49,8 +49,10 @@ export default function PortfolioPage() {
               </ScrollReveal>
 
               <div className="mt-10 columns-1 gap-6 sm:columns-2 lg:columns-3">
-                {seriesPieces.map((piece) => (
-                  <PieceCard key={piece.slug} piece={piece} />
+                {seriesPieces.map((piece, i) => (
+                  <ScrollReveal key={piece.slug} delay={(i % 6) * 0.06} className="break-inside-avoid">
+                    <PieceCard piece={piece} />
+                  </ScrollReveal>
                 ))}
               </div>
             </section>

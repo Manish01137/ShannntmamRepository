@@ -419,7 +419,8 @@ export const pieces: Piece[] = [
     slug: "shackled",
     title: "Shackled",
     series: "shackled",
-    medium: "Bronze",
+    medium: "Epoxy resin",
+    size: "2 × 2 × 1 ft (2018)",
     images: [
       {
         src: "/images/portfolio/shackled/shackled.webp",
@@ -436,7 +437,7 @@ export const pieces: Piece[] = [
     title: "Freedom",
     series: "freedom",
     medium: "Stainless steel",
-    size: "≈15 ft height — Harni Sculpture Park, near Vadodara Airport",
+    size: "15 × 8 × 7 ft (2017) — Harni Sculpture Park, near Vadodara Airport",
     images: [
       {
         src: "/images/portfolio/freedom/freedom-installed.webp",

@@ -30,6 +30,33 @@ export const pressItems: PressItem[] = [
     ],
     featured: true,
   },
+  {
+    slug: "art-and-deal-2015",
+    title: "Shanta's Treasure Trove",
+    publication: "Art & Deal Magazine",
+    issue: "April–May 2015 (Issue 79–80)",
+    author: "Sumati Gangopadhyay",
+    type: "Interview",
+    summary:
+      "An earlier interview by the same Art & Deal critic, tracing her journey through childhood in Haldia, her training under Chhatpat Sir, Raghav Kaneria and Dhruva Mistry, her visit to sculptor Andy Scott's studio in Glasgow, and her love of bronze — published while she was acting head of the Sculpture Department at the Faculty of Fine Arts, MSU Baroda.",
+    fileUrl: "/press/art-and-deal-2015.pdf",
+    pullQuotes: [
+      "I love bronze for its aesthetic beauty. There is a timeless quality about it and its sheen is attractive. But I plan to work with other media as well.",
+      "Sculpture demands very hard work, and the knowledge of many mediums and handling of various tools is a must. I believe over dependence on readymade work and labour-saving devices may ultimately affect the artistic quality of the completed work of art.",
+    ],
+  },
+  {
+    slug: "feelings-magazine-2026",
+    title: "આધુનિક સ્ત્રીનું શિલ્પરૂપ — શાંતા સર્વૈયાની કલા (The Modern Woman in Sculptural Form — The Art of Shanta Sarvaiya)",
+    publication: "Feelings Magazine (Gujarati, Global Edition)",
+    issue: "April 2026",
+    author: "Sumati Gangopadhyay",
+    type: "2-page feature, in Gujarati",
+    summary:
+      "A Gujarati-language profile covering her childhood in Haldia, training at the Faculty of Fine Arts, MSU Baroda, and major series including Shringar, Sanjeevani, Conversation and Kalpavruksha, alongside her awards and academic career. Published in Feelings, an international Gujarati family magazine.",
+    fileUrl: "/press/feelings-magazine-2026.pdf",
+    pullQuotes: [],
+  },
   // Add future press mentions here as additional objects with the same shape.
 ];
 

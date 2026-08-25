@@ -98,6 +98,48 @@ export default function PressPage() {
         </div>
       </ScrollReveal>
 
+      {/* Downloads */}
+      <ScrollReveal className="mt-20">
+        <h2 className="font-display text-2xl text-bronze">Downloads</h2>
+        <div className="mt-6 grid gap-5 sm:grid-cols-2">
+          <a
+            href={bio.contact.resumeUrl}
+            download
+            className="group flex items-center gap-4 rounded-sm border border-bronze/20 p-6 transition-colors hover:border-bronze"
+          >
+            <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-patina-light/50 text-bronze">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="h-5 w-5">
+                <path d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </span>
+            <span>
+              <span className="block font-display text-lg text-bronze">Resume / CV</span>
+              <span className="mt-0.5 block font-sans text-sm text-charcoal/70">
+                Education, appointments, awards and exhibitions
+              </span>
+            </span>
+          </a>
+
+          <a
+            href="/press/shanta-samanta-portfolio-deck.pptx"
+            download
+            className="group flex items-center gap-4 rounded-sm border border-bronze/20 p-6 transition-colors hover:border-bronze"
+          >
+            <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-patina-light/50 text-bronze">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="h-5 w-5">
+                <path d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </span>
+            <span>
+              <span className="block font-display text-lg text-bronze">Artist Portfolio Deck</span>
+              <span className="mt-0.5 block font-sans text-sm text-charcoal/70">
+                Artist statement, biography and selected works (.pptx)
+              </span>
+            </span>
+          </a>
+        </div>
+      </ScrollReveal>
+
       {/* Academic writings */}
       <ScrollReveal className="mt-20">
         <h2 className="font-display text-2xl text-bronze">Academic Writings</h2>

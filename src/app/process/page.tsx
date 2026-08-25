@@ -1,6 +1,12 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { bio } from "@/content/bio";
 import { ScrollReveal } from "@/components/ScrollReveal";
+
+function getYouTubeId(url: string): string | null {
+  const match = url.match(/youtu\.be\/([\w-]+)/) ?? url.match(/[?&]v=([\w-]+)/);
+  return match ? match[1] : null;
+}
 
 export const metadata: Metadata = {
   title: "Process — How Shanta Samanta Casts Bronze",
@@ -11,6 +17,8 @@ export const metadata: Metadata = {
 const WORKSHOPS = ["Terracotta", "Raku", "Dokra", "Glass", "Ceramics"];
 
 export default function ProcessPage() {
+  const youtubeId = getYouTubeId(bio.contact.youtube);
+
   return (
     <div className="mx-auto max-w-4xl px-6 py-16 md:px-10 md:py-24">
       <ScrollReveal>
@@ -19,6 +27,38 @@ export default function ProcessPage() {
         <p className="mt-5 max-w-2xl font-sans text-base leading-relaxed text-charcoal/85 md:text-lg">
           {bio.medium}
         </p>
+      </ScrollReveal>
+
+      {/* Metal casting demonstration at the Faculty of Fine Arts */}
+      <ScrollReveal className="mt-16">
+        <h2 className="font-display text-2xl text-bronze">
+          Metal Casting at the Faculty of Fine Arts
+        </h2>
+        <p className="mt-4 max-w-2xl font-sans text-base leading-relaxed text-charcoal md:text-lg">
+          A live bronze-pour demonstration in the foundry at the Faculty of Fine Arts, The M.S.
+          University of Baroda, where {bio.displayName.primary} teaches students the lost-wax
+          casting process firsthand.
+        </p>
+        <div className="mt-8 grid gap-6 sm:grid-cols-2">
+          <div className="relative aspect-4/3 w-full overflow-hidden rounded-sm">
+            <Image
+              src="/images/process/metal-casting-pour.webp"
+              alt="Students and faculty gathered around a crucible, pouring molten metal into moulds during a casting demonstration"
+              fill
+              sizes="(min-width: 640px) 45vw, 100vw"
+              className="object-cover"
+            />
+          </div>
+          <div className="relative aspect-4/3 w-full overflow-hidden rounded-sm">
+            <Image
+              src="/images/process/metal-casting-overhead.webp"
+              alt="Overhead view of the foundry courtyard during the casting demonstration, with students gathered around the furnace"
+              fill
+              sizes="(min-width: 640px) 45vw, 100vw"
+              className="object-cover"
+            />
+          </div>
+        </div>
       </ScrollReveal>
 
       {/* The science of casting */}
@@ -68,20 +108,21 @@ export default function ProcessPage() {
         </p>
       </ScrollReveal>
 
-      {/* Watch the process — placeholder until a working video link is confirmed */}
-      <ScrollReveal className="mt-16">
-        <h2 className="font-display text-2xl text-bronze">Watch the Process</h2>
-        <div className="mt-6 flex flex-col items-center justify-center gap-3 rounded-sm border border-dashed border-bronze/30 bg-patina-light/20 px-8 py-14 text-center">
-          <svg viewBox="0 0 40 40" fill="none" aria-hidden className="h-10 w-10 text-bronze/40">
-            <circle cx="20" cy="20" r="17" stroke="currentColor" strokeWidth="1.5" />
-            <path d="M17 14l10 6-10 6V14z" fill="currentColor" />
-          </svg>
-          <p className="font-display text-base text-bronze italic">Casting film coming soon</p>
-          <p className="max-w-sm font-sans text-xs tracking-wide text-bronze/70 uppercase">
-            A video of the bronze-casting process will be embedded here once confirmed
-          </p>
-        </div>
-      </ScrollReveal>
+      {/* Watch the process */}
+      {youtubeId && (
+        <ScrollReveal className="mt-16">
+          <h2 className="font-display text-2xl text-bronze">Watch the Process</h2>
+          <div className="relative mt-6 aspect-video w-full overflow-hidden rounded-sm bg-charcoal">
+            <iframe
+              src={`https://www.youtube.com/embed/${youtubeId}`}
+              title="Indian Sculptor Shanta Samant: Figures From The Bottom Of The Earth"
+              className="absolute inset-0 h-full w-full"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
+        </ScrollReveal>
+      )}
     </div>
   );
 }

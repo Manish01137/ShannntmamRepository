@@ -4,6 +4,7 @@ import "./globals.css";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
+import { siteKeywords } from "@/content/seo";
 
 const lora = Lora({
   variable: "--font-lora",
@@ -28,6 +29,7 @@ export const metadata: Metadata = {
   },
   description:
     "Contemporary bronze sculpture by Dr. Shanta M. Sarvaiya (Shanta Samanta) — exploring womanhood, mythology and memory. Featured in Art & Deal Magazine. Based in Vadodara, India.",
+  keywords: siteKeywords,
   openGraph: {
     type: "website",
     siteName: "Shanta Samanta",

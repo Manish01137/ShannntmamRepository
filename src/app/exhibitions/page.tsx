@@ -50,9 +50,9 @@ export default function ExhibitionsPage() {
         <ScrollReveal>
           <h2 className="font-display text-2xl text-bronze">Group Exhibitions</h2>
           <ul className="mt-4 space-y-2 font-sans text-base text-charcoal/85">
-            {exhibitions.groupShowsInternational.map((city) => (
-              <li key={city} className="border-b border-bronze/10 pb-2">
-                {city}
+            {exhibitions.groupShowsInternational.map((show) => (
+              <li key={show} className="border-b border-bronze/10 pb-2">
+                {show}
               </li>
             ))}
           </ul>

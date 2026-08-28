@@ -42,7 +42,7 @@ export default function Home() {
       {/* Hero */}
       <section className="relative overflow-hidden bg-ivory">
         <Image
-          src="/images/hero/hero-desktop.webp"
+          src="/images/hero/desktopnew.png"
           alt="Shanta Samanta, Sculptor — The Art of Strength. Almost all of her sculptures center on women, not simply as beautiful figures, but as symbols of sacrifice, resilience, nurturing, strength, struggle and transformation. As featured in Art & Deal Magazine."
           width={1536}
           height={1024}
@@ -51,7 +51,7 @@ export default function Home() {
           className="hidden h-auto w-full md:block"
         />
         <Image
-          src="/images/hero/hero-mobile.webp"
+          src="/images/hero/mobileviewnlatest.png"
           alt="Shanta Samanta, Sculptor — The Art of Strength. Almost all of her sculptures center on women, not simply as beautiful figures, but as symbols of sacrifice, resilience, nurturing, strength, struggle and transformation. 'Each form I create is a tribute to the spirit of womanhood.' — Shanta Samanta"
           width={864}
           height={1821}

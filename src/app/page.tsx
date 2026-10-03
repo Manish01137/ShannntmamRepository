@@ -41,24 +41,54 @@ export default function Home() {
     <>
       {/* Hero */}
       <section className="relative overflow-hidden bg-ivory">
-        <Image
-          src="/images/hero/desktopnew.png"
-          alt="Shanta Samanta, Sculptor — The Art of Strength. Almost all of her sculptures center on women, not simply as beautiful figures, but as symbols of sacrifice, resilience, nurturing, strength, struggle and transformation. As featured in Art & Deal Magazine."
-          width={1536}
-          height={1024}
-          priority
-          sizes="100vw"
-          className="hidden h-auto w-full md:block"
-        />
-        <Image
-          src="/images/hero/mobileviewnlatest.png"
-          alt="Shanta Samanta, Sculptor — The Art of Strength. Almost all of her sculptures center on women, not simply as beautiful figures, but as symbols of sacrifice, resilience, nurturing, strength, struggle and transformation. 'Each form I create is a tribute to the spirit of womanhood.' — Shanta Samanta"
-          width={864}
-          height={1821}
-          priority
-          sizes="100vw"
-          className="block h-auto w-full md:hidden"
-        />
+        {/* Desktop: photo has blank space built in on the left — text is overlaid here as real HTML */}
+        <div className="relative hidden md:block">
+          <Image
+            src="/images/hero/hero-banner-desktop.webp"
+            alt="Shanta Samanta, bronze sculptor, kneeling beside one of her bronze sculptures in her studio"
+            width={1756}
+            height={895}
+            priority
+            sizes="100vw"
+            className="h-auto w-full"
+          />
+          <div className="absolute inset-0">
+            <div className="max-w-[44%] pt-32 pl-[6%] lg:pt-28 xl:pt-32">
+              <p className="font-sans text-[clamp(0.65rem,1vw,0.875rem)] leading-snug tracking-[0.2em] text-gold uppercase">
+                Sculpting Emotions
+                <br />
+                Shaping Stories in Timeless Forms
+              </p>
+              <span className="mt-4 block h-px w-16 bg-gold" aria-hidden />
+              <h1 className="mt-5 font-display leading-[1.05] text-charcoal">
+                <span className="block text-[clamp(2rem,4.8vw,4.25rem)]">{bio.displayName.primary}</span>
+              </h1>
+              <p className="mt-2 font-sans text-[clamp(0.75rem,1.1vw,1rem)] tracking-[0.2em] text-gold uppercase">
+                Sculptor
+              </p>
+              <p className="mt-5 font-sans text-[clamp(0.8rem,1.25vw,1.1rem)] leading-relaxed text-charcoal/80">
+                Her sculptures trace the journey from childhood to womanhood, embodying
+                resilience, strength, sacrifice, struggle, and transformation. Through her art,
+                she celebrates the enduring spirit of women.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Mobile: banner already has all text baked in. The fixed nav floats over this
+            page's hero with no spacer, so add top padding here to keep it clear of the
+            banner's own text, which starts very close to the top of the image. */}
+        <div className="block pt-16 md:hidden">
+          <Image
+            src="/images/hero/hero-banner-mobile.webp"
+            alt="Shanta Samanta, Sculptor. Sculpting Emotions, Shaping Stories in Timeless Forms. Her sculptures trace the journey from childhood to womanhood, embodying resilience, strength, sacrifice, struggle, and transformation. Through her art, she celebrates the enduring spirit of women."
+            width={1024}
+            height={1536}
+            priority
+            sizes="100vw"
+            className="h-auto w-full"
+          />
+        </div>
       </section>
 
       {/* Featured Works */}

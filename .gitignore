@@ -46,3 +46,6 @@ next-env.d.ts
 /Ode to Nature/
 /Shringar/
 /drive-download-*/
+
+# netlify local build output
+.netlify

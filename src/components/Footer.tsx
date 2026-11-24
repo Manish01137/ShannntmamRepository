@@ -44,6 +44,14 @@ export function Footer() {
             {bio.contact.phone}
           </a>
           <a
+            href={bio.contact.instagram}
+            target="_blank"
+            rel="noreferrer"
+            className="mt-2 block transition-colors hover:text-gold"
+          >
+            Instagram
+          </a>
+          <a
             href={bio.contact.youtube}
             target="_blank"
             rel="noreferrer"

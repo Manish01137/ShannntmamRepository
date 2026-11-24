@@ -28,7 +28,7 @@ const MAP = [
   ["Shringar/Lady with a parrot.JPG", "public/images/portfolio/shringar/lady-with-a-parrot-ii.webp"],
   ["Shringar/Alasya Kanya-II.JPG", "public/images/portfolio/shringar/alasya-kanya-i.webp"],
   ["Shringar/Alasya Kanya-Shringar Series.JPG", "public/images/portfolio/shringar/alasya-kanya-vi.webp"],
-  ["Shringar/lady with a mobile.JPG", "public/images/portfolio/shringar/alasya-kanya-vii.webp"],
+  // Alasya Kanya VII now uses a supplied white-ground photo (alasya-kanya-vii-white.webp), converted directly.
   ["Shringar/Lady wearing Necklace.JPG", "public/images/portfolio/shringar/lady-wearing-necklace.webp"],
   ["Shringar/Lady with a flower.JPG", "public/images/portfolio/shringar/lady-with-a-flower.webp"],
   ["Shringar/Lady with flowers.JPG", "public/images/portfolio/shringar/lady-with-flowers.webp"],
@@ -57,7 +57,8 @@ const MAP = [
   ["drive-download-20260811T040226Z-1-001/Snjeevani-III.jpg", "public/images/portfolio/sanjeevani/sanjeevani-iii.webp"],
 
   // --- Freedom ---
-  ["drive-download-20260811T040226Z-1-001/Freedom-stainless steel.jpg", "public/images/portfolio/freedom/freedom-installed.webp"],
+  // Freedom photos (freedom-front.webp, freedom-back.webp) were replaced with
+  // supplied pre-edited shots and converted directly — not part of this batch.
 
   // --- Conversation ---
   ["drive-download-20260811T040226Z-1-001/conversation-2.JPG", "public/images/portfolio/conversation/conversation-iii.webp"],

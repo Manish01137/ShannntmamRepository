@@ -110,10 +110,10 @@ export const pieces: Piece[] = [
     medium: "Bronze",
     images: [
       {
-        src: "/images/portfolio/shringar/alasya-kanya-vii.webp",
-        width: 2000,
-        height: 1333,
-        alt: "Alasya Kanya VII — bronze figure reclining with one arm extended along the ground in a dramatic diagonal pose",
+        src: "/images/portfolio/shringar/alasya-kanya-vii-white.webp",
+        width: 1080,
+        height: 796,
+        alt: "Alasya Kanya VII — bronze figure reclining with legs outstretched in a long verdigris skirt and buttoned vest, one arm arched over her head and the other hand raised as if holding a mirror",
       },
     ],
   },
@@ -338,22 +338,6 @@ export const pieces: Piece[] = [
     ],
   },
 
-  // ---------- Object Study ----------
-  {
-    slug: "object-study",
-    title: "An Object Study",
-    series: "object-study",
-    medium: "Bronze",
-    images: [
-      {
-        src: "/images/portfolio/object-study/object-study.webp",
-        width: 753,
-        height: 2000,
-        alt: "An Object Study — a bronze seated girl in a mint-green dress on a wooden stool, holding a small object",
-      },
-    ],
-  },
-
   // ---------- Sanjeevani ----------
   {
     slug: "sanjeevani-i",
@@ -440,10 +424,16 @@ export const pieces: Piece[] = [
     size: "15 × 8 × 7 ft (2017) — Harni Sculpture Park, near Vadodara Airport",
     images: [
       {
-        src: "/images/portfolio/freedom/freedom-installed.webp",
-        width: 838,
-        height: 2000,
-        alt: "Freedom — a monumental stainless-steel figure releasing birds from open hands, installed outdoors against an evening sky",
+        src: "/images/portfolio/freedom/freedom-front.webp",
+        width: 884,
+        height: 1600,
+        alt: "Freedom — a monumental stainless-steel woman mid-leap on a domed base, arms raised as a flight of birds rises from her open hands, framed by palm trees at dusk",
+      },
+      {
+        src: "/images/portfolio/freedom/freedom-back.webp",
+        width: 957,
+        height: 1600,
+        alt: "Freedom seen from behind — the steel figure's arched back, flowing hair and upstretched arms glowing gold in warm sunlight as birds lift skyward",
       },
     ],
   },
@@ -460,6 +450,21 @@ export const pieces: Piece[] = [
         width: 2000,
         height: 1500,
         alt: "Conversation III — three small bronze figures in mint-green dresses seated on a plinth edge, legs dangling",
+      },
+    ],
+  },
+  {
+    slug: "quiet-companions",
+    title: "Quiet Companions",
+    series: "conversation",
+    medium: "Bronze",
+    note: "It captures a moment of shared stillness, where two figures coexist in silent understanding, finding comfort in each other's presence.",
+    images: [
+      {
+        src: "/images/portfolio/conversation/quiet-companions.webp",
+        width: 986,
+        height: 1155,
+        alt: "Quiet Companions — two bronze girls in verdigris dresses seated side by side on white plinths, legs dangling, one with her hair in a bun touching her face, the other hugging her knee",
       },
     ],
   },
@@ -501,11 +506,34 @@ export const pieces: Piece[] = [
     ],
   },
 
-  // ---------- Other Works ----------
+  // ---------- Miscellaneous ----------
+  {
+    slug: "object-study",
+    title: "An Object Study",
+    series: "miscellaneous",
+    medium: "Bronze",
+    note: "This work looks so inconspicuous until you see the title — 'An Object Study, where the subject becomes an Object.' At first glance it captures a seated young girl engrossed in a 3-D object study, appearing innocent and ordinary. But instead of a traditional seat, she rests upon an Object Study stool — instantly transforming her into an object of study for the observer. This work delves into 'perception' and the 'male gaze,' inviting reflection on how the placement of a woman can alter perceptions within a male-dominated society — a women-centric exploration of societal and power dynamics.",
+    images: [
+      {
+        src: "/images/portfolio/object-study/object-study.webp",
+        width: 753,
+        height: 2000,
+        alt: "An Object Study — a bronze seated girl in a mint-green dress on a wooden stool, holding a small object",
+      },
+    ],
+  },
+  {
+    slug: "beyond-the-frame",
+    title: "Beyond the Frame",
+    series: "miscellaneous",
+    note: "The work explores the relationship between identity, perception, and the world we experience. The human figure sits with a window replacing her face, suggesting that our understanding of the world is often shaped by what we choose to see—and what remains beyond our vision. The window becomes both a barrier and an opening: it separates the individual from the outside world while simultaneously offering a view into it. The absence of a face raises questions about identity, presence, and whether we truly see the world directly or only through the frames created by our experiences, memories, and perspectives. The work invites us to look beyond the frame—to question what is visible, what is hidden, and where the self exists within that space.",
+    comingSoon: true,
+    images: [],
+  },
   {
     slug: "in-my-garden-under-the-champa-tree",
     title: "In My Garden… Under the Champa Tree",
-    series: "other-works",
+    series: "miscellaneous",
     medium: "Bronze and terracotta",
     images: [
       {
@@ -525,7 +553,7 @@ export const pieces: Piece[] = [
   {
     slug: "gazing-in-my-lily-pond",
     title: "Gazing in My Lily Pond",
-    series: "other-works",
+    series: "miscellaneous",
     medium: "Bronze",
     images: [
       {
@@ -537,9 +565,24 @@ export const pieces: Piece[] = [
     ],
   },
   {
+    slug: "among-the-lilies",
+    title: "Among the Lilies",
+    series: "miscellaneous",
+    medium: "Bronze",
+    note: "Surrounded by delicate lily leaves and buds, the figure becomes a part of nature, celebrating serenity, beauty, and the quiet interconnectedness of life.",
+    images: [
+      {
+        src: "/images/portfolio/other-works/among-the-lilies.webp",
+        width: 436,
+        height: 272,
+        alt: "Among the Lilies — a bronze bust of a woman wearing sunglasses and a flower in her hair, emerging from a spread of verdigris lily leaves and slender buds",
+      },
+    ],
+  },
+  {
     slug: "golfer",
     title: "Golfer",
-    series: "other-works",
+    series: "miscellaneous",
     medium: "Bronze",
     images: [
       {
@@ -553,7 +596,7 @@ export const pieces: Piece[] = [
   {
     slug: "hanging-sculpture",
     title: "Hanging Sculpture",
-    series: "other-works",
+    series: "miscellaneous",
     medium: "Bronze",
     images: [
       {
@@ -567,7 +610,7 @@ export const pieces: Piece[] = [
   {
     slug: "mystery-ii",
     title: "Mystery II",
-    series: "other-works",
+    series: "miscellaneous",
     medium: "Bronze",
     unlisted: true,
     images: [
@@ -582,7 +625,7 @@ export const pieces: Piece[] = [
   {
     slug: "mystery-iii",
     title: "Mystery III",
-    series: "other-works",
+    series: "miscellaneous",
     medium: "Bronze",
     unlisted: true,
     images: [
@@ -597,7 +640,7 @@ export const pieces: Piece[] = [
   {
     slug: "portrait-busts-six",
     title: "Portrait Busts",
-    series: "other-works",
+    series: "miscellaneous",
     medium: "Bronze",
     unlisted: true,
     images: [
@@ -612,7 +655,7 @@ export const pieces: Piece[] = [
   {
     slug: "portrait-busts-three",
     title: "Portrait Busts (study)",
-    series: "other-works",
+    series: "miscellaneous",
     medium: "Bronze",
     unlisted: true,
     images: [
@@ -627,7 +670,7 @@ export const pieces: Piece[] = [
   {
     slug: "self-portrait-bust",
     title: "Self Portrait",
-    series: "other-works",
+    series: "miscellaneous",
     medium: "Ceramic",
     unlisted: true,
     images: [
@@ -642,7 +685,7 @@ export const pieces: Piece[] = [
   {
     slug: "driving-driving",
     title: "Driving, Driving",
-    series: "other-works",
+    series: "miscellaneous",
     medium: "Bronze",
     unlisted: true,
     images: [
@@ -657,7 +700,7 @@ export const pieces: Piece[] = [
   {
     slug: "only-for-you",
     title: "Only for You",
-    series: "other-works",
+    series: "miscellaneous",
     medium: "Bronze",
     unlisted: true,
     images: [
@@ -672,7 +715,7 @@ export const pieces: Piece[] = [
   {
     slug: "dancing-trio",
     title: "Dancing Trio",
-    series: "other-works",
+    series: "miscellaneous",
     medium: "Bronze",
     images: [
       {

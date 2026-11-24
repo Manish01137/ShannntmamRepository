@@ -34,7 +34,8 @@ Built for Vercel — connect the repo, add the two env vars above in Project Set
 
 ## Known content gaps
 
-- **Shackled** and **Object Study** ship with an on-brand "Photograph coming soon" placeholder — no photo exists yet for either piece.
+- **Beyond the Frame** (Miscellaneous) has its concept note but ships with an on-brand "Photograph coming soon" placeholder — no photo has been supplied yet.
+- **Object Study** and the former **Other Works** pieces are grouped under a single final **Miscellaneous** category.
 - Several real, photographed pieces have no title/statement documented anywhere in the source brief (two abstract "Mystery" works, a portrait-bust study, "Driving, Driving", "Only for You", plus a few extra Shringar photos). They're shown in the Portfolio grid with plain factual captions only — see `content/image-manifest.md` for the full list. Send proper titles/statements whenever you have them and update `pieces.ts`.
 - The Press page has one confirmed feature (Art & Deal Magazine, 2023) with no verbatim pull-quotes yet — none were fabricated. Send the scan/PDF and 2–3 real quotes to add via `pressItems` in `src/content/press.ts`.
 # ShannntmamRepository

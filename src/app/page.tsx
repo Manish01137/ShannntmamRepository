@@ -16,7 +16,7 @@ const FEATURED_SLUGS = [
   "conversation",
 ];
 
-const SERIES_PREVIEW_SLUGS = seriesList.map((s) => s.slug).filter((slug) => slug !== "other-works");
+const SERIES_PREVIEW_SLUGS = seriesList.map((s) => s.slug);
 
 export default function Home() {
   const featured = FEATURED_SLUGS.map((slug) => pieces.find((p) => p.slug === slug)).filter(
@@ -28,8 +28,11 @@ export default function Home() {
   const seriesPreviews = SERIES_PREVIEW_SLUGS.map((slug) => {
     const series = seriesList.find((s) => s.slug === slug);
     if (!series) return null;
-    const firstPiece = piecesBySeries(slug).find((p) => p.images[0]);
-    return { series, image: firstPiece?.images[0] };
+    const seriesPieces = piecesBySeries(slug);
+    const coverPiece =
+      seriesPieces.find((p) => p.slug === series.coverPieceSlug && p.images[0]) ??
+      seriesPieces.find((p) => p.images[0]);
+    return { series, image: coverPiece?.images[0] };
   }).filter((s): s is NonNullable<typeof s> => Boolean(s));
 
   const tickerItems = [
@@ -197,13 +200,13 @@ export default function Home() {
             {freedomPiece?.images[0] && (
               <ScrollReveal>
                 <Link href={`/portfolio/${freedomPiece.slug}`} className="group block">
-                  <div className="relative aspect-4/5 w-full overflow-hidden">
+                  <div className="relative aspect-2/3 w-full overflow-hidden">
                     <Image
                       src={freedomPiece.images[0].src}
                       alt={freedomPiece.images[0].alt}
                       fill
                       sizes="(min-width: 768px) 45vw, 100vw"
-                      className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+                      className="object-cover object-top transition-transform duration-500 ease-out group-hover:scale-105"
                     />
                   </div>
                   <p className="mt-4 font-display text-xl text-ivory transition-colors group-hover:text-gold">

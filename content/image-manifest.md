@@ -38,7 +38,7 @@ The brief names 6 pieces; the folder holds 9 photographs. Only 2 match a named t
 | Lady with a Parrot II | `Shringar/Lady with a parrot.JPG` | **HIGH** | Arm crossed to chest holding a parrot. |
 | Alasya Kanya I (arms raised straight up, hands nearly touching, tall triangle) | `Shringar/Alasya Kanya-II.JPG` | **MEDIUM / FLAG** | Pose is an exact visual match for "Alasya Kanya I," but the filename says "II." Likely a source-file mislabel per the brief's warning — flagging rather than silently renaming. |
 | Alasya Kanya VI (arms overhead, rounded arch) | `Shringar/Alasya Kanya-Shringar Series.JPG` | MEDIUM | Best pose match for "rounded arch," but not confirmed by filename. |
-| Alasya Kanya VII (one arm extended along ground, dramatic diagonal) | `Shringar/lady with a mobile.JPG` | MEDIUM | Legs splayed in dramatic diagonal, matches description; filename ("mobile") is unrelated and likely a mislabel. |
+| Alasya Kanya VII (one arm extended along ground, dramatic diagonal) | `alasya-kanya-vii-white.webp` (replacement photo supplied Nov 2026) | **HIGH** | Same sculpture as the earlier `Shringar/lady with a mobile.JPG` (arched arm, raised mirror hand, buttoned vest, reclining pose); replaced with a cleaner white-ground shot. |
 | Alasya Kanya V (reclining, both hands resting on skirt) | — | **NOT FOUND** | None of the 9 Shringar photos show this exact hands-on-skirt reclining pose. |
 | Unnamed/extra Shringar pieces | `Shringar/Lady wearing Necklace.JPG`, `Shringar/Lady with a flower.JPG`, `Shringar/Lady with flowers.JPG`, `Shringar/Lady with a punkha.JPG` | **UNLISTED** | Four additional, clearly-genuine Shringar-style bronzes (self-adornment poses, mint patina) with no corresponding title/description in §5.2. Real pieces, just not documented in the brief — will include in the Shringar gallery grid with generic captions ("Shringar Series, bronze") unless Manish supplies titles. |
 
@@ -68,7 +68,7 @@ The brief names 6 pieces; the folder holds 9 photographs. Only 2 match a named t
 | Sanjeevani — An Endless Journey | `drive-download.../Sanjeevani- An endless journey.jpg` | **HIGH** | Flying figure over cityscape, stone in one hand, mobile phone in other — white background. |
 | Sanjeevani II | `drive-download.../sanjeevani-II_.png` | **HIGH** | Second version, flying pose, stone + phone, mounted on round green base. |
 | Sanjeevani III | `drive-download.../Snjeevani-III.jpg` | **HIGH** | Kneeling on natural rock, reaching up to a round stone, phone in other hand — matches "one mounted on a natural rock" variant. |
-| Freedom (stainless steel monumental) | `drive-download.../Freedom-stainless steel.jpg` | **HIGH** | Tall stainless-steel figure releasing birds, outdoor sky, dome pedestal — matches description exactly. |
+| Freedom (stainless steel monumental) | `freedom-front.webp`, `freedom-back.webp` (replacement photos supplied Nov 2026) | **HIGH** | Front view shows the on-site plaque: "Shanta Samanta · Freedom · Stainless Steel · Ht. 17 Feet". Back view is a warm-light shot from the same angle as the original `Freedom-stainless steel.jpg`, which it replaces. |
 | Object Study (seated girl on stool) | — | **NOT FOUND** | No photo of this piece was present in any folder. |
 
 Object Study has **no photograph on file**, same as Shackled — will need the same "photograph coming soon" treatment unless Manish supplies one.
@@ -141,3 +141,10 @@ Useful for the About page, not the Portfolio grid:
 - **5 filename/description mismatches** flagged above (Kalpavruksha-III.jpg, two Alasya Kanya numbering conflicts, Swing-III.jpg, Acrobat-III.jpg, the "Freedom" hanging-sculpture filename, and the "Conversation-III.jpg" bust photo) — none silently guessed, all called out for confirmation.
 - **9 unlisted-but-real pieces** found (Mystery II/III, portrait busts ×2 photos, self-portrait bust, Driving-driving, Only for You, plus 4 extra Shringar pieces and several extra Whispers of Innocence pieces) — held back from invented copy; will show with plain factual captions or be excluded from v1 pending your call.
 - **4 artist/process photos** identified as strong candidates for the About page.
+
+## Additions — Nov 2026
+
+| Piece | File | Confidence | Notes |
+|---|---|---|---|
+| Quiet Companions (Conversation series) | `conversation/quiet-companions.webp` | **HIGH** | Title, medium and concept supplied by the artist. Two seated girls on white plinths; the figures appear to be the same casts as two of the three in Conversation III, shown as a pair. |
+| Among the Lilies (Other Works) | `other-works/among-the-lilies.webp` | **HIGH** | Title, medium and concept supplied by the artist. A different piece from *Gazing in My Lily Pond* (flower in hair, bindi, spread leaves and buds; no bird, no glass base). Source photo is only 436×272 px — a higher-resolution photo is needed. |

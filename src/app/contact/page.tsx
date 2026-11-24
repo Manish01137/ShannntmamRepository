@@ -45,6 +45,17 @@ export default function ContactPage() {
               </a>
             </div>
             <div>
+              <h2 className="text-xs tracking-[0.15em] text-bronze uppercase">Instagram</h2>
+              <a
+                href={bio.contact.instagram}
+                target="_blank"
+                rel="noreferrer"
+                className="mt-2 block text-lg text-charcoal transition-colors hover:text-bronze"
+              >
+                {bio.contact.instagramHandle}
+              </a>
+            </div>
+            <div>
               <h2 className="text-xs tracking-[0.15em] text-bronze uppercase">YouTube</h2>
               <a
                 href={bio.contact.youtube}

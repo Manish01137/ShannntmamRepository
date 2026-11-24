@@ -2,14 +2,13 @@ export type SeriesSlug =
   | "kalpavruksha"
   | "shringar"
   | "whispers-of-innocence"
-  | "object-study"
   | "sanjeevani"
   | "manuscript"
   | "shackled"
   | "freedom"
   | "conversation"
   | "living-tapestry"
-  | "other-works";
+  | "miscellaneous";
 
 export type Series = {
   slug: SeriesSlug;
@@ -17,6 +16,8 @@ export type Series = {
   title: string;
   statement?: string;
   curatorialNote?: string;
+  /** Piece whose first photo is used for this series' homepage tile (defaults to the first piece with a photo). */
+  coverPieceSlug?: string;
 };
 
 export const seriesList: Series[] = [
@@ -42,13 +43,6 @@ export const seriesList: Series[] = [
     title: "Whispers of Innocence",
     statement:
       "These bronze creations are akin to a poetic expression of the innocence found in childhood, seeking to recapture the joy and mystery of my happiest days. Infused with youthful innocence, passion and the vibrant zest for life, these works embody a delicate balance, harmony and dynamic movement. Each sculpture elicits anticipation and a realisation of the sublime beauty of nature, reminding viewers of lost innocence and the simple pleasures of childhood, through figures jumping, skipping, skating and riding — defying gravity.",
-  },
-  {
-    slug: "object-study",
-    navLabel: "Object Study",
-    title: "An Object Study — Where the Subject Becomes an Object",
-    statement:
-      "This work looks so inconspicuous until you see the title — 'An Object Study, where the subject becomes an Object.' At first glance it captures a seated young girl engrossed in a 3-D object study, appearing innocent and ordinary. But instead of a traditional seat, she rests upon an Object Study stool — instantly transforming her into an object of study for the observer. This work delves into 'perception' and the 'male gaze,' inviting reflection on how the placement of a woman can alter perceptions within a male-dominated society — a women-centric exploration of societal and power dynamics.",
   },
   {
     slug: "sanjeevani",
@@ -93,9 +87,10 @@ export const seriesList: Series[] = [
       "This artwork celebrates the interconnectedness of all life. Birds, flora, fauna, and even the crocodile are shown as vital threads in nature's fabric, reminding us to respect and protect the delicate balance of biodiversity.",
   },
   {
-    slug: "other-works",
-    navLabel: "Other Works",
-    title: "Other Works",
+    slug: "miscellaneous",
+    navLabel: "Miscellaneous",
+    title: "Miscellaneous",
+    coverPieceSlug: "golfer",
   },
 ];
 

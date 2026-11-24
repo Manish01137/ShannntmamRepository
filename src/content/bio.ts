@@ -78,6 +78,9 @@ export const bio = {
     email: "sarvaiya.shanta-sculpture@msubaroda.ac.in",
     website: "https://www.shantasamanta.com/",
     youtube: "https://youtu.be/K2k9I8_T14c",
+    /** Supplied by the artist (tracking params stripped). */
+    instagram: "https://www.instagram.com/shanta_samanta/",
+    instagramHandle: "@shanta_samanta",
     /** Real profile URL supplied directly by the artist. */
     academia: "https://msub.academia.edu/MsShantaSamanta",
     resumeUrl: "/shanta-samanta-cv.pdf",

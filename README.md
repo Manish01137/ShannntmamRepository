@@ -21,12 +21,12 @@ Raw source photography (`Faded Memories/`, `Ode to Nature/`, `Shringar/`, `drive
 
 ## Contact form
 
-The `/contact` form posts to `src/app/api/contact/route.ts`, which sends via [Resend](https://resend.com). It needs two environment variables (see `.env.example`):
+The `/contact` form posts to `src/app/api/contact/route.ts`, which sends via [Resend](https://resend.com). Enquiries are delivered to **shanta3111@gmail.com** (see `.env.example`):
 
-- `RESEND_API_KEY` — from your Resend account
-- `CONTACT_TO_EMAIL` — the inbox that should receive enquiries
+- `RESEND_API_KEY` — from your Resend account (required)
+- `CONTACT_TO_EMAIL` — optional; overrides the default recipient above
 
-Until both are set, the form fails gracefully with a friendly on-page message instead of crashing. For production deliverability, verify your own sending domain in Resend and set `CONTACT_FROM_EMAIL` to an address on it (otherwise it falls back to `onboarding@resend.dev`, which works but is less trusted by spam filters).
+Until the API key is set, the form fails gracefully with a friendly on-page message instead of crashing. For production deliverability, verify your own sending domain in Resend and set `CONTACT_FROM_EMAIL` to an address on it (otherwise it falls back to `onboarding@resend.dev`, which works but is less trusted by spam filters).
 
 ## Deployment
 

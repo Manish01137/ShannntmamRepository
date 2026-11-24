@@ -25,10 +25,11 @@ export async function POST(request: Request) {
   }
 
   const apiKey = process.env.RESEND_API_KEY;
-  const toEmail = process.env.CONTACT_TO_EMAIL;
+  // Enquiries go to the artist's inbox unless CONTACT_TO_EMAIL overrides it.
+  const toEmail = process.env.CONTACT_TO_EMAIL || "shanta3111@gmail.com";
 
-  if (!apiKey || !toEmail) {
-    console.error("Contact form is not configured: missing RESEND_API_KEY or CONTACT_TO_EMAIL.");
+  if (!apiKey) {
+    console.error("Contact form is not configured: missing RESEND_API_KEY.");
     return Response.json(
       { error: "The contact form isn't set up yet. Please reach out by phone in the meantime." },
       { status: 503 }
